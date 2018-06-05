@@ -1,0 +1,20 @@
+<div *ngIf="song">
+    <h2>{{ song.name | uppercase }} Details</h2>
+    <figure>
+    <img src="{{ song.src }}" alt="img {{song.name}}" width="300" height="200">
+      <figcaption>
+        <h2>{{song.name}}</h2>
+        <p>This is the song called {{song.name}}, the number {{song.id}} of the album.</p>
+      </figcaption>
+    </figure>
+    <div><span>ID: </span>{{song.id}}</div>
+    <div>
+      <label>Name:
+        <input [(ngModel)]="song.name" placeholder="name"/>
+      </label>
+    </div>
+    <button class="btn" (click)="goBack()">Go back</button>
+    <button class="btn" (click)="save()">Save</button>
+  </div>
+  
+  

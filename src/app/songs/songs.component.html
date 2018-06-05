@@ -1,0 +1,17 @@
+<h2>My Songs</h2>
+
+<ul class="songs">
+  <li *ngFor="let song of songs">
+    <a routerLink="/detail/{{song.id}}">
+      <span class="badge">{{song.id}}</span> {{song.name}}
+    </a>
+    <button class="btn btn-danger" title="delete song"
+    (click)="delete(song)">x</button>
+
+    <button class="btn" title="play song"
+    (click)="play(song)">></button>
+    <button class="btn" title="stop song"
+    (click)="stop()">||</button>
+  </li>
+  <audio-component></audio-component>
+</ul>
